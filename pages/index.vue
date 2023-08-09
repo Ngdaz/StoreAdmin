@@ -6,10 +6,11 @@ definePageMeta({
 const enableHorizonralLayout = (layout: string) => {
   setPageLayout(layout);
 };
+
 </script>
 
 <template>
-  <div>
+  <div class="mt-[200px]">
     <button @click="enableHorizonralLayout('horizontal')">
       Change to horizontal layout
     </button>
@@ -20,4 +21,9 @@ const enableHorizonralLayout = (layout: string) => {
     </button>
   </div>
   <h1>duy anh</h1>
+  <div>
+     <NuxtLink to="/about">
+    About page
+  </NuxtLink>
+  </div>
 </template>

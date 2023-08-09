@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'Custom page',
-  layout: false,
+  layout: 'horizontal',
 });
 
 const enableHorizonralLayout = (layout: string) => {

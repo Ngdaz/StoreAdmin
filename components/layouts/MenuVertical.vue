@@ -1,8 +1,19 @@
 <template>
   <div class="h-screen">
+    <div :class="!isCollapsed ? 'flex justify-between' : '' ">
+      <el-icon v-if="!isCollapsed"><location /></el-icon>
+      <div>
+        <el-button
+          type="primary"
+          :icon="Edit"
+          @click="updateCollapsedValue(!isCollapsed)"
+        />
+      </div>
+    </div>
     <el-menu
       default-active="2"
       class="el-menu-vertical-demo h-screen"
+      :collapse="isCollapsed"
       @open="handleOpen"
       @close="handleClose"
     >
@@ -46,6 +57,8 @@ import {
   Location,
   Setting,
 } from '@element-plus/icons-vue';
+import { Edit } from '@element-plus/icons-vue';
+const { isCollapsed, updateCollapsedValue } = useCollapsed();
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
@@ -53,3 +66,10 @@ const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
 </script>
+
+<style>
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 220px;
+  min-height: 400px;
+}
+</style>

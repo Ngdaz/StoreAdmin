@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="flex justify-between w-100">
+  <div class="flex justify-between">
     <div><el-input v-model="input" placeholder="Please input" /></div>
     <div>
       <div><p>Lang</p></div>

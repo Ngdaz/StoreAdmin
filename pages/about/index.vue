@@ -4,7 +4,7 @@
 </template>
 <script setup>
 definePageMeta({
-  layout: 'custom',
+  layout: 'vertical',
 });
 </script>
 <style></style>
